@@ -23,6 +23,9 @@ RUN wget -O /tmp/get-pip.py "https://bootstrap.pypa.io/get-pip.py" && \
     python /tmp/get-pip.py "pip==9.0.1" && \
     rm /tmp/get-pip.py 
 
+RUN pip install scrapy-fake-useragent
+RUN pip install scrapy-mongodb
+
 ADD . /scrapyrt/src
 RUN pip install /scrapyrt/src
 
